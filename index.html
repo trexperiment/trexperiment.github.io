@@ -3,93 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Page</title>
+    <title>Web Developer Portfolio</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            color: #333;
+            background-color: #f4f4f4;
         }
         header {
-            background-color: #333;
-            color: #fff;
-            padding: 1em 0;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px 0;
             text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
         }
         nav {
             margin: 0;
             padding: 0;
-            background-color: #444;
+            background-color: #34495e;
         }
         nav ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
         }
         nav ul li {
-            display: inline;
-            margin-right: 10px;
+            margin: 0 15px;
         }
         nav ul li a {
-            color: #fff;
+            color: #ecf0f1;
             text-decoration: none;
-            padding: 0.5em;
+            padding: 10px 15px;
+            display: block;
+            transition: background-color 0.3s;
         }
         nav ul li a:hover {
-            background-color: #555;
+            background-color: #1abc9c;
+            border-radius: 5px;
         }
         .container {
             padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .hero {
+            background: url('hero-bg.jpg') no-repeat center center/cover;
+            color: #ecf0f1;
+            padding: 80px 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .hero h2 {
+            font-size: 3em;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.2em;
+        }
+        .section {
+            padding: 40px 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            border-bottom: 2px solid #1abc9c;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        .projects, .contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .project, .contact-info {
+            background: #fff;
+            border-radius: 8px;
+            padding: 20px;
+            flex: 1 1 calc(50% - 20px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .project img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
         }
         footer {
-            background-color: #333;
-            color: #fff;
+            background-color: #2c3e50;
+            color: #ecf0f1;
             text-align: center;
             padding: 10px 0;
-            position: absolute;
-            width: 100%;
+            position: relative;
             bottom: 0;
+            width: 100%;
+        }
+        footer p {
+            margin: 0;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to My Website</h1>
+        <h1>John Doe - Web Developer</h1>
     </header>
     
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
     <div class="container">
-        <section id="home">
-            <h2>Home</h2>
-            <p>This is the home page. Welcome to our website!</p>
+        <section class="hero">
+            <h2>Welcome to My Portfolio</h2>
+            <p>Crafting beautiful and functional websites that drive results.</p>
         </section>
-        
-        <section id="about">
-            <h2>About</h2>
-            <p>Learn more about us on this page.</p>
+
+        <section id="about" class="section">
+            <h2>About Me</h2>
+            <p>Hello! I’m John Doe, a passionate web developer with expertise in creating dynamic and responsive web applications. With a background in both front-end and back-end development, I strive to build websites that are both visually appealing and highly functional.</p>
         </section>
-        
-        <section id="services">
-            <h2>Services</h2>
-            <p>Discover the services we offer.</p>
+
+        <section id="projects" class="section">
+            <h2>Projects</h2>
+            <div class="projects">
+                <div class="project">
+                    <h3>Project One</h3>
+                    <img src="project1.jpg" alt="Project One">
+                    <p>A brief description of Project One. This project showcases my skills in X, Y, and Z.</p>
+                </div>
+                <div class="project">
+                    <h3>Project Two</h3>
+                    <img src="project2.jpg" alt="Project Two">
+                    <p>A brief description of Project Two. This project highlights my expertise in A, B, and C.</p>
+                </div>
+            </div>
         </section>
-        
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Get in touch with us here.</p>
+
+        <section id="contact" class="section">
+            <h2>Contact Me</h2>
+            <div class="contact-info">
+                <p>Email: john.doe@example.com</p>
+                <p>Phone: (123) 456-7890</p>
+                <p>LinkedIn: <a href="https://linkedin.com/in/johndoe" target="_blank">linkedin.com/in/johndoe</a></p>
+                <p>GitHub: <a href="https://github.com/johndoe" target="_blank">github.com/johndoe</a></p>
+            </div>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2024 My Website. All rights reserved.</p>
+        <p>&copy; 2024 John Doe. All rights reserved.</p>
     </footer>
 </body>
 </html>
